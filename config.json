@@ -1,0 +1,54 @@
+{
+	"port": 80,
+	"statics": {
+		"/site.css": [
+			"css/site/layout.css",
+			"css/site/fonts.css",
+			"css/site/menu.css",
+			"css/site/buttons.css"
+		],
+		"/site.js": [
+			"js/lib/logging.js",
+			"js/lib/strings.js",
+			"js/lib/collections.js",
+			"js/lib/dom.js",
+			"js/lib/events.js",
+			"js/lib/ajax.js",
+			"js/lib/io.js"
+		],
+		"/lib.js": [
+			"js/lib/logging.js",
+			"js/lib/strings.js",
+			"js/lib/collections.js",
+			"js/lib/dom.js",
+			"js/lib/events.js",
+			"js/lib/ajax.js",
+			"js/lib/io.js"
+		],
+		"/refresh.js": [
+			"js/lib/io.js",
+			"js/code/editor/refresh.js"
+		],
+		"/code.css": [
+			"css/code/code.css"
+		],
+		"/code.js": [
+			"js/code/codemirror.js",
+			"js/code/modes/coffeescript.js",
+			"js/code/modes/css.js",
+			"js/code/modes/htmlmixed.js",
+			"js/code/modes/jade.js",
+			"js/code/modes/javascript.js",
+			"js/code/modes/less.js",
+			"js/code/modes/sass.js",
+			"js/code/modes/sql.js",
+			"js/code/modes/xml.js",
+			"js/code/editor/icons.coffee",
+			"js/code/editor/storage.coffee",
+			"js/code/editor/menu.coffee",
+			"js/code/editor/tree.coffee",
+			"js/code/editor/refresh.coffee",
+			"js/code/editor/code.coffee"
+		]
+	}
+}

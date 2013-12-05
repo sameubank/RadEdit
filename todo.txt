@@ -1,0 +1,32 @@
+=To Do=
+
+==Save==
+* Postgres connection
+* Auto-save to postgres
+* Save button
+* Merge resolution?
+* Git commit button?
+
+==Monitor==
+* Port 80 pass-through
+* Cluster process spawning
+* Connection loss indicator
+
+==Search==
+* Create term cache
+* Update term cache on file change
+* Create search box
+* Create search results view
+
+==Modularization==
+* Define acceptable use of globals
+* Adopt MVC architecture?
+
+==Front-end automation==
+* Research Yeoman, Bower and Grunt
+
+==Scaling==
+* Switchable Redshift/RDS/DynamoDB connection
+* Host ring
+* Sticky Socket.IO
+

@@ -2,9 +2,7 @@ global.express = require "express"
 global.app = express()
 global.io = require('socket.io').listen(app.listen(config.port), {log: false})
 
-io.set 'log level', 0
 log.info "Application listening on port " + config.port
-
 
 app.on = (method, routePath, callback) ->
 	existingRoute = null
@@ -17,6 +15,9 @@ app.on = (method, routePath, callback) ->
 	else
 		app.get routePath, callback
 
+app.on 'GET', '/ping', (request, response) ->
+	response.send {}
+
 
 global.send = (response, templateName, context) ->
 	response.send templates[templateName] context
@@ -26,5 +27,9 @@ process.on "uncaughtException", (err) ->
 	log.error err
 
 
-app.on 'GET', '/ping', (request, response) ->
-	response.send {}
+io.on = io.sockets.on
+
+io.on 'connection', (socket) ->
+
+	socket.on 'error', (error) ->
+		log error

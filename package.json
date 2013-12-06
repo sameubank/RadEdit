@@ -1,11 +1,14 @@
 {
-	"name": "RadDeck",
+	"name": "RadEdit",
 	"version": "0.0.0",
-	"description": "Interactive presentations",
+	"description": "Web-based IDE and building/refreshing framework for Node.js",
 	"dependencies": {
+		"tracer": "latest",
+		"colors": "latest",
 		"socket.io": "latest",
 		"express": "latest",
-		"jade": "latest"
+		"jade": "latest",
+		"orm": "latest"
 	},
-	"author": "Sam Eubank <sam@raddeck.com>"
+	"author": "Sam Eubank <sam@radedit.com>"
 }

@@ -7,11 +7,6 @@
 * Merge resolution?
 * Git commit button?
 
-==Monitor==
-* Port 80 pass-through
-* Cluster process spawning
-* Connection loss indicator
-
 ==Search==
 * Create term cache
 * Update term cache on file change
@@ -24,6 +19,11 @@
 
 ==Front-end automation==
 * Research Yeoman, Bower and Grunt
+
+==Monitoring==
+* Port 80 pass-through
+* Cluster process spawning
+* Connection loss indicator
 
 ==Scaling==
 * Switchable Redshift/RDS/DynamoDB connection

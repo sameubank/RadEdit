@@ -52,10 +52,12 @@ string = treeString node
 setHtml 'tree', string
 
 
-delegate 'tree', 'div.item', 'click', (event, element, target) ->
+delegate 'tree', 'div.item', 'mousedown touchstart', (event, element, target) ->
 	icon = firstChild target
 	tree = nextSibling target
 	toggleClass tree, 'on'
+
+	# When a file is clicked, load it.
 	if hasClass icon, 'file'
 		rel = getText target
 		while true
@@ -64,7 +66,8 @@ delegate 'tree', 'div.item', 'click', (event, element, target) ->
 				break
 			rel = (getText previousSibling target) + '/' + rel
 		fetchFile rel
-	else if /us/.test(icon.className)
+
+	# Grandchildren only exist in non-empty folders.
+	else if firstChild firstChild icon
 		sign = if hasClass tree, 'on' then 'minus' else 'plus'
-		log icon
 		setHtml icon, icons[sign]

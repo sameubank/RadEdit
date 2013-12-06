@@ -38,6 +38,7 @@ td {
 .menu {
 	float: left;
 	padding: 0.2em 0.4em;
+	cursor: pointer;
 }
 
 .menu>img {
@@ -71,6 +72,10 @@ td {
 	border: 0.2em solid #333;
 	right: auto;
 	min-width: 25em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -ms-user-select: none;
 }
 
 .area {
@@ -80,6 +85,10 @@ td {
 
 .on {
 	display: block !important;
+}
+
+.disabled {
+	opacity: 0.2;
 }
 
 div.item {

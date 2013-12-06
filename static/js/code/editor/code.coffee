@@ -17,10 +17,15 @@ modes =
 	xml: 'xml'
 
 editor = null
+currentRel = null
 
 fetchFile = (rel) ->
 	setValue 'lastFile', rel
 	socket.emit 'code:get', {rel: rel}
+
+saveFile = ->
+	enableSaveButton false
+	socket.emit 'code:save', {rel: currentRel}
 
 socket.on 'code:got', (json) ->
 	flipClass 'treeButton', 'on', 0
@@ -38,8 +43,11 @@ socket.on 'code:got', (json) ->
 		autofocus: true
 		value: code
 	)
+	currentRel = rel
+	enableSaveButton json.canSave
 	editor.on 'change', (cm, change) ->
-		return if change.origin is 'io'
+		if change.origin is 'io'
+			return
 		from = 0
 		to = change.from.line - 1
 		if to > -1
@@ -57,6 +65,7 @@ socket.on 'code:got', (json) ->
 			text
 		]
 		socket.emit 'code:change', {rel: rel, change: change}
+		enableSaveButton true
 
 socket.on 'code:changed', (json) ->
 	doc = editor.doc
@@ -74,6 +83,7 @@ socket.on 'code:changed', (json) ->
 		change[key] = {line: line, ch: boundary - pos}
 	change.replacement = text
 	doc.replaceRange change.replacement, change.from, change.to, 'io'
+	enableSaveButton true
 
 
 rel = location.hash.substr 1

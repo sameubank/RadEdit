@@ -77,16 +77,6 @@ checkDir = (path, files) ->
 				dir.files.push getNode rel + (if rel then '/' else '') + file
 
 
-compileFile = (path, callback) ->
-	fs.readFile source, (err, content) ->
-		log.error if err
-		if /\.coffee$/.test source
-			content = coffee.compile('' + content)
-			content = content.replace(/^\(function\(\) \{/, '')
-			content = content.replace(/\}\)\.call\(this\);[\r\n]*$/, '')
-		callback(content)
-
-
 refreshClients = (changed) ->
 	clearTimeout refreshClients.t
 	refreshClients.t = setTimeout(->
@@ -185,9 +175,13 @@ statics =
 
 loadStatic = (rel, content) ->
 	if /\.coffee$/.test rel
-		content = coffee.compile('' + content)
-		content = content.replace(/^\(function\(\) \{/, '')
-		content = content.replace(/\}\)\.call\(this\);[\r\n]*$/, '')
+		try
+			content = coffee.compile('' + content)
+			content = content.replace(/^\(function\(\) \{/, '')
+			content = content.replace(/\}\)\.call\(this\);[\r\n]*$/, '')
+		catch e
+			log.debug "Can't compile #{rel}"
+			log.error e
 	statics.content[rel] = content
 	if groups = statics.parents[rel]
 		for group in groups

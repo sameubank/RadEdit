@@ -43,10 +43,3 @@ for own key, paths of icons
 	icons[key] = html
 icons.tree = icons.folder
 
-# Populate the menu.
-menu = ['tree', 'console', 'save', 'search']
-html = ''
-for key in menu
-	html += '<div id="' + key + 'Button" class="menu">' + icons[key] + '</div>'
-setHtml getElement('menu'), html
-

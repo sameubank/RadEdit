@@ -1,5 +1,11 @@
 {
 	"port": 80,
+	"startModules": [
+		"coffee-script",
+		"./app/log",
+		"./app/app",
+		"./app/loader"
+	],
 	"statics": {
 		"/site.css": [
 			"css/site/layout.css",

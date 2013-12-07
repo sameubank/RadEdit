@@ -24,6 +24,8 @@ fetchFile = (rel) ->
 	socket.emit 'code:get', {rel: rel}
 
 saveFile = ->
+	if hasClass 'saveButton', 'disabled'
+		return
 	enableSaveButton false
 	socket.emit 'code:save', {rel: currentRel}
 

@@ -1,9 +1,9 @@
 =To Do=
+* Versioning & merging (conflicts suck)
 
 ==Save==
-* Postgres connection
-* Auto-save to postgres
-* Save button
+* Ctrl+S binding
+* Posuto-save to postgres
 * Merge resolution?
 * Git commit button?
 
@@ -29,4 +29,3 @@
 * Switchable Redshift/RDS/DynamoDB connection
 * Host ring
 * Sticky Socket.IO
-

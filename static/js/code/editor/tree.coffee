@@ -52,7 +52,7 @@ string = treeString node
 setHtml 'tree', string
 
 
-delegate 'tree', 'div.item', 'mousedown touchstart', (event, element, target) ->
+delegate 'tree', 'div.item', 'click', (event, element, target) ->
 	icon = firstChild target
 	tree = nextSibling target
 	toggleClass tree, 'on'

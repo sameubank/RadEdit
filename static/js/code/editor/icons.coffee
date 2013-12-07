@@ -1,3 +1,8 @@
+# Icons are specified as:
+#	key: [
+#		[strokeColor, fillColor, svgPath]
+#		...
+#   ]
 icons =
 	folder: [
 		['ed8', 'c92', 'M1.5,5.5v11h17v-11h-17l2-3h5l2,3z']
@@ -24,7 +29,7 @@ icons =
 		['cfc', '090', 'M7.5,7.5v-4h5v4h4v5h-4v4h-5v-4h-4v-5z']
 	]
 	delete: [
-		['fcc', '900', 'M3.5,7l3,3l-3,3l3.5,3.5l3-3l3,3l3.5-3.5l-3-3l3-3l-3.5-3.5l-3,3l-3-3z']
+		['fdd', '900', 'M3.5,7l3,3l-3,3l3.5,3.5l3-3l3,3l3.5-3.5l-3-3l3-3l-3.5-3.5l-3,3l-3-3z']
 	]
 	minus: [
 		['aaa', '444', 'M5.5,7.5l4,6l4-6l-4,1z']
@@ -38,7 +43,7 @@ icons =
 for own key, paths of icons
 	html = '<svg>'
 	for path in paths
-		html += '<path stroke="#' + path[0] + '" fill="#' + path[1] + '" d="' + path[2] + '"></path>'
+		html += '<path stroke="#' + path[0] + '" fill="#' + path[1] + '" d="' + path[2] + '" stroke-linejoin="round"></path>'
 	html += '</svg>'
 	icons[key] = html
 icons.tree = icons.folder

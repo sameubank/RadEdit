@@ -1,5 +1,5 @@
 # Populate the menu.
-menu = ['tree', 'console', 'save', 'search']
+menu = ['tree', 'save']
 html = ''
 for key in menu
 	html += '<div id="' + key + 'Button" class="menu">' + icons[key] + '</div>'

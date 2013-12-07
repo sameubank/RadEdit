@@ -1,4 +1,4 @@
-global.express = require "express"
+express = require "express"
 global.app = express()
 global.io = require('socket.io').listen(app.listen(config.port), {log: false})
 

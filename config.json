@@ -1,61 +1,22 @@
 {
 	"port": 80,
-	"startModules": [
-		"coffee-script",
-		"./app/log",
-		"./app/app",
-		"./app/loader"
-	],
-	"statics": {
+	"db": "pg://postgres:psynftgh@localhost/radedit",
+	"public": {
 		"/site.css": [
-			"css/site/layout.css",
-			"css/site/fonts.css",
-			"css/site/menu.css",
-			"css/site/buttons.css"
+			"public/css/layout.css",
+			"public/css/fonts.css",
+			"public/css/menu.css",
+			"public/css/buttons.css"
 		],
 		"/site.js": [
-			"js/lib/logging.js",
-			"js/lib/strings.js",
-			"js/lib/collections.js",
-			"js/lib/dom.js",
-			"js/lib/events.js",
-			"js/lib/ajax.js",
-			"js/lib/io.js"
-		],
-		"/lib.js": [
-			"js/lib/logging.js",
-			"js/lib/strings.js",
-			"js/lib/collections.js",
-			"js/lib/dom.js",
-			"js/lib/events.js",
-			"js/lib/ajax.js",
-			"js/lib/io.js"
-		],
-		"/refresh.js": [
-			"js/lib/io.js",
-			"js/code/editor/refresh.js"
-		],
-		"/code.css": [
-			"css/code/code.css"
-		],
-		"/code.js": [
-			"js/code/codemirror.js",
-			"js/code/modes/coffeescript.js",
-			"js/code/modes/css.js",
-			"js/code/modes/htmlmixed.js",
-			"js/code/modes/jade.js",
-			"js/code/modes/javascript.js",
-			"js/code/modes/less.js",
-			"js/code/modes/sass.js",
-			"js/code/modes/sql.js",
-			"js/code/modes/xml.js",
-			"js/code/editor/storage.coffee",
-			"js/code/editor/icons.coffee",
-			"js/code/editor/key-bindings.coffee",
-			"js/code/editor/menu.coffee",
-			"js/code/editor/tree.coffee",
-			"js/code/editor/refresh.coffee",
-			"js/code/editor/code.coffee"
+			"public/node_modules/radedit/public/lib/logging.js",
+			"public/node_modules/radedit/public/lib/strings.js",
+			"public/node_modules/radedit/public/lib/collections.js",
+			"public/node_modules/radedit/public/lib/dom.js",
+			"public/node_modules/radedit/public/lib/events.js",
+			"public/node_modules/radedit/public/lib/ajax.js",
+			"public/node_modules/radedit/public/lib/io.js",
+			"public/node_modules/radedit/public/editor/refresh.js"
 		]
 	}
 }

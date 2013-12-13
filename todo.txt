@@ -1,11 +1,8 @@
 =To Do=
-* Versioning & merging (conflicts suck)
 
 ==Save==
-* Ctrl+S binding
-* Posuto-save to postgres
-* Merge resolution?
-* Git commit button?
+* Save to postgres
+* Merge resolution
 
 ==Search==
 * Create term cache
@@ -14,8 +11,8 @@
 * Create search results view
 
 ==Modularization==
+* Create NPM module
 * Define acceptable use of globals
-* Adopt MVC architecture?
 
 ==Front-end automation==
 * Research Yeoman, Bower and Grunt

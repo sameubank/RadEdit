@@ -1,0 +1,87 @@
+include shell
+
+	block body
+		#head
+			.panel
+				.box
+					h1#logo
+						svg(viewBox="0 0 16 16")
+							path(stroke="#000", fill="#c70", d="M0.5,8c0,10,15,10,15,0c0-10-15-10-15,0z", stroke-linejoin="round")
+							path(stroke="#000", fill="#000", d="M3.5,10c1,4,8,4,9,0c-1,3-8,3-9,0z", stroke-linejoin="round")
+							path(stroke="#000", fill="#24b", d="M7,4.5c0-0.5,2-0.5,2,0c0,4.5,6.5,3.5,6.5,0c0-1-6.5-1-6.5,0c0-0.5-2-0.5-2,0c0-1-6.5-1-6.5,0c0,3.5,6.5,4.5,6.5,0z", stroke-linejoin="round")
+						span Rad<b>Edit</b>
+						a#tagline(href="/code#todo.txt") Build Node.js apps together quickly.
+
+		#body
+			.panel
+				.box4
+					h3 Code Collaboration
+					p.about RadEdit's IDE enables simultaneous editing, like Google Docs for code.
+				.box4
+					h3 Instant Gratification
+					p.about When you save changes, RadEdit refreshes your browser.
+				.box4
+					h3 Real-Time Testing
+					p.about The test runner sees changes and automagically runs affected tests.
+				.box4
+					h3 MVC Framework
+					p.about Apps have a Model View Controller architecture with many available helpers. 
+				br
+		#use
+			.panel
+				.box3
+					h2 Installation
+					tt npm install radedit<br>node<br>&gt; require('radedit')('MyApp')
+				.box3
+					h2 Resources
+					a.resource(href="/tutorials") Tutorials
+					a.resource(href="/documentation") Documentation
+					a.resource(href="https://github.com/sameubank/RadEdit") Project
+				.box3
+					h2 Philosophy
+					ul
+						li Convention over Configuration
+						li Don't Repeat Yourself
+						li Clean Code
+						li Continuous Everything
+				br
+		#inside
+			.panel
+				.box: h2 What's inside?
+				.box5
+					h3 Express
+					p Express is a minimal and flexible node.js web application framework, providing a robust set of features for building rich web applications.
+				.box5
+					h3 Socket.IO
+					p Socket.IO aims to make realtime apps possible in every browser and mobile device, blurring the differences between transport mechanisms.
+				.box5
+					h3 ORM
+					p ORM offers Object Relation Mappings for your Node.js application. It connects to MySQL, PostgreSQL, Amazon Redshift, SQLite or MongoDB.
+				.box5
+					h3 CoffeeScript
+					p CoffeeScript is a little language that compiles into JavaScript. It exposes the good parts of JavaScript in a simple way.
+				.box5
+					h3 Jade
+					p Jade is a terse and simple templating language that compiles to HTML. It has a strong focus on performance and powerful features.
+				br
+				.box5
+					h3 CodeMirror
+					p CodeMirror is a versatile text editor implemented in JavaScript for the browser. It comes with language modes and addons for advanced editing.
+				.box5
+					h3 CoffeeLint
+					p CoffeeLint is a style checker that helps keep CoffeeScript code clean and consistent.
+				.box5
+					h3 Mocha
+					p Mocha is a feature-rich JavaScript test framework running on node.js and the browser, making asynchronous testing simple and fun.
+				.box5
+					h3 Should
+					p Should is an expressive, readable, test framework agnostic, assertion library that allows you to express how objects should behave.
+				.box5
+					h3 Forever
+					p Forever is a simple command line tool for ensuring that a given script runs continuously (i.e. forever).
+				br
+		#foot
+			.panel
+				p.box.right: a(href="/license") MIT License
+				p.box &copy; 2013 Sam Eubank, All Rights Reserved
+

@@ -1,4 +1,5 @@
 app.on 'get', '/', (request, response) ->
-	send response, 'site/index'
+	send response, 'index'
 
 exports.unload = ->
+	

@@ -26,3 +26,8 @@
 * Switchable Redshift/RDS/DynamoDB connection
 * Host ring
 * Sticky Socket.IO
+
+==Documentation==
+* Describe initialization/setup process for developers
+* List core functionality and features
+* Design and create pitch deck on sameubank.github.com/RadEdit/

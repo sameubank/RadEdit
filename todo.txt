@@ -1,5 +1,10 @@
 =To Do=
 
+==Refresh==
+* Dependency tree for renders
+* Refresh when dependencies change
+* Re-run select tests when dependencies change
+
 ==Save==
 * Save to postgres
 * Merge resolution

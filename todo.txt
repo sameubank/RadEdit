@@ -19,6 +19,10 @@
 * Create NPM module
 * Define acceptable use of globals
 
+==Generator==
+* Ability to create new project
+* Ability to create new mode/view/controller
+
 ==Front-end automation==
 * Research Yeoman, Bower and Grunt
 

@@ -9,14 +9,14 @@
 			"public/css/buttons.css"
 		],
 		"/site.js": [
-			"public/node_modules/radedit/public/lib/logging.js",
-			"public/node_modules/radedit/public/lib/strings.js",
-			"public/node_modules/radedit/public/lib/collections.js",
-			"public/node_modules/radedit/public/lib/dom.js",
-			"public/node_modules/radedit/public/lib/events.js",
-			"public/node_modules/radedit/public/lib/ajax.js",
-			"public/node_modules/radedit/public/lib/io.js",
-			"public/node_modules/radedit/public/editor/refresh.js"
+			"node_modules/radedit/public/lib/logging.js",
+			"node_modules/radedit/public/lib/strings.js",
+			"node_modules/radedit/public/lib/collections.js",
+			"node_modules/radedit/public/lib/dom.js",
+			"node_modules/radedit/public/lib/events.js",
+			"node_modules/radedit/public/lib/ajax.js",
+			"node_modules/radedit/public/lib/io.js",
+			"node_modules/radedit/public/editor/refresh.js"
 		]
 	}
 }

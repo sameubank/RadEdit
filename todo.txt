@@ -9,12 +9,6 @@
 * Save to postgres
 * Merge resolution
 
-==Search==
-* Create term cache
-* Update term cache on file change
-* Create search box
-* Create search results view
-
 ==Modularization==
 * Create NPM module
 * Define acceptable use of globals
